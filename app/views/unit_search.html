@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Search for a unit
+        </h1>
+
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="width-20">
+                Search for a unit
+            </label>
+            <input class="govuk-input govuk-input--width-20 typeahead" id="width-20" name="width-20" type="text">
+        </div>
+
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Units</th>
+                <th class="govuk-table__header" scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">PRIVATE_UNIT</th>
+                <td class="govuk-table__cell"><a href="/unit_amend">Edit</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">DCU_TEST</th>
+                <td class="govuk-table__cell"><a href="/unit_amend">Edit</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">UKVI_TEST</th>
+                <td class="govuk-table__cell"><a href="/unit_amend">Edit</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Find a user
+        </h1>{{releaseVersion | log }}
+
+        <form action="/user_team_search" method="post" class="form">
+
+            {% from "radios/macro.njk" import govukRadios %}
+
+            {{ govukRadios({
+            idPrefix: "where-do-you-live",
+            name: "user_or_team_search",
+            fieldset: {
+            legend: {
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl"
+            }
+            },
+            items: [
+            {
+            value: "user_search",
+            text: "by user details"
+            },
+            {
+            value: "team_search",
+            text: "by team"
+            }
+            ]
+            }) }}
+            {% from "button/macro.njk" import govukButton %}
+
+            {{ govukButton({
+            text: "Continue"
+            }) }}
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+        Team search
+    </h1>
+
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="width-20">
+                Find a team
+            </label>
+            <input class="govuk-input govuk-input--width-20 typeahead" id="width-20" name="width-20" type="text">
+        </div>
+
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Team name</th>
+                <th class="govuk-table__header" scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Team 1</th>
+                <td class="govuk-table__cell"><a href="/team">View</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Team 2</th>
+                <td class="govuk-table__cell"><a href="/team">View</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Team 3</th>
+                <td class="govuk-table__cell"><a href="/team">View</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<script>
+  const mySource = ['Team 1', 'Team 2', 'Team 3']
+
+  $('.typeahead').typeahead({
+      minLength: 1,
+      highlight: true
+    },
+    {
+      source: mySource
+    })
+</script>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Add team permissions
+        </h1>
+
+        <form action="/team_add_user_yes_no" method="post" class="form">
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="sort">
+                    Case Type
+                </label>
+                <select class="govuk-select" id="sort" name="sort">
+                    <option value="empty" selected></option>
+                    <option value="min">MIN</option>
+                    <option value="imcm">IMCM</option>
+                    <option value="tro">TRO</option>
+                    <option value="uten">UTEN</option>
+                </select>
+
+                <label class="govuk-label" for="sort">
+                    Permission level
+                </label>
+                <select class="govuk-select" id="sort" name="sort">
+                    <option value="empty" selected></option>
+                    <option value="summary">Summary</option>
+                    <option value="read">Read</option>
+                    <option value="write">Write</option>
+                    <option value="owner">Owner</option>
+                </select>
+            </div>
+
+            <button type="submit" class="govuk-button clear">
+                Add permission
+            </button>
+
+
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Case Types</th>
+                    <th class="govuk-table__header" scope="col">Permissions</th>
+                    <th class="govuk-table__header" scope="col"></th>
+                </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">MIN</td>
+                    <td class="govuk-table__cell">
+                        <select class="govuk-select" id="sort" name="sort">
+                            <option value="empty"></option>
+                            <option value="summary">Summary</option>
+                            <option value="read" selected>Read</option>
+                            <option value="write">Write</option>
+                            <option value="owner">Owner</option>
+                        </select>
+                    </td>
+                    <td class="govuk-table__cell"><a href="#">Remove</a></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <button type="submit" class="govuk-button clear">
+                Continue
+            </button>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

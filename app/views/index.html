@@ -1,0 +1,40 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Management Portal
+      </h1>
+
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="/user_team_search">Add/Remove Users</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="/create_amend_unit">Add/Amend Unit</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="/create_amend_team">Add/Remove/Rename Teams</a>
+        </li>
+      </ul>
+
+<!--      <h2 class="govuk-heading-m">Examples and documentation</h2>-->
+
+<!--      <ul class="govuk-list govuk-list&#45;&#45;bullet">-->
+<!--        <li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>-->
+<!--        <li>-->
+<!--          <a href="https://design-system.service.gov.uk">-->
+<!--            GOV.UK Design System-->
+<!--          </a>-->
+<!--        </li>-->
+<!--      </ul>-->
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Unit summary
+        </h1>{{releaseVersion | log }}
+
+        <form action="/team_confirmation" method="post" class="form">
+
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Unit Name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        PRIVATE_UNIT
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                            Change
+                            <span class="govuk-visually-hidden"> unit name</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Short code
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        PRIVATE
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                            Change
+                            <span class="govuk-visually-hidden"> short code</span>
+                        </a>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Teams
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        Team 1
+                        <br>Team 2
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                            Change
+                            <span class="govuk-visually-hidden"> teams</span>
+                        </a>
+                    </dd>
+                </div>
+            </dl>
+
+            <button type="submit" class="govuk-button">
+                Create unit
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Team information
+        </h1>
+
+        <h2 class="govuk-heading-l">Team 1</h2>
+
+        <form action="/team_summary" method="post" class="form">
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="width-20">
+                    Find a user
+                </label>
+                <input class="govuk-input govuk-input--width-20 typeahead" id="width-20" name="width-20" type="text">
+                <button type="submit" class="govuk-button fright">
+                    Add user
+                </button>
+            </div>
+
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Users</th>
+                    <th class="govuk-table__header" scope="col">Action</th>
+                </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row"><a href="/user">Jon Smith</a></th>
+                    <td class="govuk-table__cell"><a href="/user_remove_error">Remove</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row"><a href="/user">Greg Toon</a></th>
+                    <td class="govuk-table__cell"><a href="/user_search">Remove</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row"><a href="/user">Jenny Bright</a></th>
+                    <td class="govuk-table__cell"><a href="/user_search">Remove</a></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <button type="submit" class="govuk-button">
+                Continue
+            </button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}
